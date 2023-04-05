@@ -1,13 +1,23 @@
 import uasyncio as asyncio
 from lib.wifi_manager import WIFI
-from micropython import const
+from lib.MicroWebSrv.microWebSrv import MicroWebSrv
 
 
 async def main():
-    wifi = WIFI(const('Extrim'), const('Port!23456'))
+    wifi = WIFI()
+    web_server = MicroWebSrv()
+    try:
+        await asyncio.sleep(1)
 
-    await asyncio.sleep(1)
-    await wifi.connect()
+        if wifi.load_credentials():
+            await wifi.connect_to_wifi()
+        else:
+            await wifi.open_ap()
+
+        web_server.Start(threaded=False)
+
+    except:
+        wifi.deinit()
 
 if __name__ == '__main__':
     asyncio.run(main())
