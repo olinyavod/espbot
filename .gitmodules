@@ -1,3 +1,3 @@
 [submodule "lib/MicroWebSrv"]
-	path = lib/MicroWebSrv
+	path = ESP32/lib/MicroWebSrv
 	url = https://github.com/jczic/MicroWebSrv.git
