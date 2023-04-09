@@ -1,15 +1,13 @@
-﻿using CommunityToolkit.Maui.Views;
 using espbot.ui.ViewModules;
 
 namespace espbot.ui.Pages;
 
-public partial class HomePage
+public partial class SearchBotPopup
 {
-	public HomePage(HomeViewModel dataContext)
+	public SearchBotPopup(SearchBotViewModel dataContext)
 	{
 		InitializeComponent();
 
 		BindingContext = dataContext;
 	}
 }
-

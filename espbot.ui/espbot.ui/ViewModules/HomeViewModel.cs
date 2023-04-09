@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using espbot.ui.Servuces;
 using Plugin.BLE.Abstractions.Contracts;
 using Plugin.BLE.Abstractions.EventArgs;
 
@@ -9,6 +10,7 @@ namespace espbot.ui.ViewModules;
 public partial class HomeViewModel
 {
 	private readonly IBluetoothLE _bluetooth;
+	private readonly INavigationService _navigationService;
 
 	[ObservableProperty]
 	private int _count;
@@ -22,9 +24,14 @@ public partial class HomeViewModel
 	[ObservableProperty]
 	private string? _counterTitle = "Click me";
 
-	public HomeViewModel(IBluetoothLE bluetooth)
+	public HomeViewModel
+	(
+		IBluetoothLE bluetooth,
+		INavigationService navigationService
+	)
 	{
 		_bluetooth = bluetooth ?? throw new ArgumentNullException(nameof(bluetooth));
+		_navigationService = navigationService;
 
 		_bluetooth.StateChanged += BluetoothOnStateChanged;
 
@@ -38,9 +45,9 @@ public partial class HomeViewModel
 
 	private bool OnCanScanClicked() => BluetoothAvailable;
 
-	[RelayCommand(CanExecute = nameof(OnCanScanClicked))]
-	void OnScanClicked()
+	[RelayCommand(CanExecute = nameof(OnCanScanClicked), AllowConcurrentExecutions = false)]
+	private Task OnScanClicked()
 	{
-		
+		return _navigationService.ShowPopupAsync<SearchBotViewModel>();
 	}
 }

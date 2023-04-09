@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:ui="clr-namespace:espbot.ui"
+             Color="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray950}}"
+             x:Class="espbot.ui.Pages.SearchBotPopup">
+    <Grid ColumnDefinitions="*, Auto"
+          RowDefinitions="Auto, 1, *, Auto">
+	    <Label Text="Search..."
+	           Grid.Column="0"
+	           Grid.Row="0"
+	           VerticalOptions="Center"
+	           Margin="10, 0"/>
+
+        <ImageButton Grid.Column="1"
+                     Grid.Row="0"
+                     WidthRequest="30"
+                     HeightRequest="30"
+                     CornerRadius="15"
+                BackgroundColor="Transparent">
+	        <ImageButton.Source>
+                <FontImageSource Glyph="{x:Static ui:MaterailFontIcons.Close}"
+                                 FontFamily="MaterialDesignIcons"
+                                 Size="25"/>
+	        </ImageButton.Source>
+        </ImageButton>
+
+        <BoxView Grid.Column="0"
+                 Grid.ColumnSpan="2"
+                 Grid.Row="1"
+                 Margin="5, 0"/>
+
+        <RefreshView Grid.Row="2"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="2"
+                     MinimumHeightRequest="250"
+                     MinimumWidthRequest="250">
+            <CollectionView/>
+        </RefreshView>
+
+        <Button Grid.Column="0"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Margin="0, 5"
+                HorizontalOptions="Center"
+                Text="Connect">
+	        <Button.ImageSource>
+		        <FontImageSource Glyph="{x:Static ui:MaterailFontIcons.CarConnected}"
+		                         FontFamily="MaterialDesignIcons"
+                                 Color="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Primary}}"
+		                         Size="25"/>
+	        </Button.ImageSource>
+        </Button>
+
+    </Grid>
+</views:Popup>

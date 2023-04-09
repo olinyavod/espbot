@@ -2,11 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModules="using:espbot.ui.ViewModules"
+             xmlns:ui="clr-namespace:espbot.ui"
              x:DataType="{x:Type viewModules:HomeViewModel}"
              x:Class="espbot.ui.Pages.HomePage">
 	<ContentPage.ToolbarItems>
         <ToolbarItem Text="Scan"
-                     Command="{Binding ScanClickedCommand}"/>
+                     Command="{Binding ScanClickedCommand}">
+	        <ToolbarItem.IconImageSource>
+		        <FontImageSource FontFamily="MaterialDesignIcons"
+                                 Glyph="{x:Static ui:MaterailFontIcons.ToyBrickSearch}"
+		                         Size="25" />
+	        </ToolbarItem.IconImageSource>
+        </ToolbarItem>
 	</ContentPage.ToolbarItems>
 	<ScrollView>
         <VerticalStackLayout
