@@ -1,2 +1,141 @@
 # created by virtualenv automatically
 .idea/
+www/
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# IDE files
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Compiled output
+dist/
+build/
+
+# Configuration files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+
+# misc
+.DS_Store
+*.tmp
+*.bak
+*.swp
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Backup files
+*~
+\#*\#
+\*.swp
+\*.bak
+.idea
+.idea/*
+.vscode/*
+# Visual Studio generated files
+.vs/
+bin/
+obj/
+.vs/
+.vscode/
+/Debug/
+/Release/
+/Releases/
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# Others
+*.suo
+*.user
+*.cache
+*.bak
+*.tmp
+*~*.*
+*.dbmdl
+*.dbproj.schemaview
+*.pfx
+*.publishsettings
+*.pubxml
+*.xml
+*.dll.config
+*.deploymentscript
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.apsymbols
+*.apsym
+*.mpdb
+*.visx
+*.vsixmanifest
+*.zip
+*.7z
+*.rar
+*.gz
+*.tar
+# NuGet Packages
+*.nupkg
+#nuget files
+*.nupkg.sha512
+*.snupkg
+*.snupkg.sha512
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+# Benchmarks
+BenchmarkDotNet.Artifacts/
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+# StyleCop
+StyleCopReport.xml
+# Files for Docker
+.dockerignore
+Dockerfile
+**/Dockerfile
+**/docker-compose.yml
+readme.md
+LICENSE
+apidoc/
+apidocs/
+**/*.md
+**/*.txt
+**/*.json
+**/*.yaml
+**/*.yml
+**/**/*.md
+**/**/*.txt
+**/**/*.json
+**/**/*.yaml
+**/**/*.yml
+**/.gitkeep
+.idea/
+*.yml.swagger
+swagger-output.json
+swagger-output-test.json
+swagger-output-*.json
+temp/

@@ -5,7 +5,7 @@ from lib.MicroWebSrv.microWebSrv import MicroWebSrv
 
 async def main():
     wifi = WIFI()
-    web_server = MicroWebSrv()
+    web_server = MicroWebSrv(webPath='www/')
     try:
         await asyncio.sleep(1)
 

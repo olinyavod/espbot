@@ -22,7 +22,7 @@ class WIFI:
 
         self._station.connect(self._ssid, self._password)
 
-        for _ in range(20):
+        for _ in range(60):
             await asyncio.sleep(1)
             if self._station.isconnected():
                 print("Successfully connected to WiFi")
@@ -42,7 +42,7 @@ class WIFI:
         ssid = f'espbot ({mac})'
         self._station.config(essid=ssid, password=const('123'))
 
-        for _ in range(20):
+        for _ in range(60):
             await asyncio.sleep(1)
             if self._station.isconnected():
                 print(f"AP {ssid} was opened.")
