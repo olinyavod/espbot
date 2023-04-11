@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+      <useWPF>true</useWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ResourcesStore\ResourcesStore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="OFT.DxFeed">
+      <HintPath>C:\Projects\atas\GitLab\oft\Connectors\DxFeed\bin\Debug\net7.0-windows\OFT.DxFeed.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
